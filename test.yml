@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  handlers:
+    - include: 'handlers/main.yml'
+  vars_files:
+    - 'defaults/main.yml'
+  tasks:
+    - include: 'tasks/main.yml'
+      vars:
+        ntp_servers:
+          - 0.de.pool.ntp.org
+          - 1.de.pool.ntp.org
+          - 3.de.pool.ntp.org
+          - 4.de.pool.ntp.org
