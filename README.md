@@ -1,7 +1,7 @@
 # Ansible Ntp Role
 
-[![Build Status](https://travis-ci.org/weareinteractive/ansible-role-ntp.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-role-ntp)
-[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-role-ntp.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-role-ntp)
+[![Build Status](https://travis-ci.org/weareinteractive/ansible-ntp.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-ntp)
+[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-ntp.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-ntp)
 
 > `ntp` is an [ansible](http://www.ansible.com) role which: 
 > 
@@ -25,7 +25,7 @@ $ arm install franklinkim.ntp
 Using `git`:
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-role-ntp.git
+$ git clone https://github.com/weareinteractive/ansible-ntp.git
 ```
 
 ## Variables
@@ -67,8 +67,8 @@ ntp_statsdir: /var/log/ntpstats/
 ## Testing
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-role-ntp.git
-$ cd ansible-role-ntp
+$ git clone https://github.com/weareinteractive/ansible-ntp.git
+$ cd ansible-ntp
 $ vagrant up
 ```
 
