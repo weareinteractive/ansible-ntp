@@ -3,8 +3,9 @@
 - name: Installing packages
   apt: >
     pkg={{ item }}
-    state=latest
+    state=present
   with_items: ntp
   tags:
     - system
     - ntp
+    - install

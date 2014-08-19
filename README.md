@@ -30,15 +30,10 @@ $ git clone https://github.com/weareinteractive/ansible-ntp.git
 
 ## Variables
 
-```
-# ntp_servers:
-#   - 0.de.pool.ntp.org
-#   - 1.de.pool.ntp.org
-#   - 3.de.pool.ntp.org
-#   - 4.de.pool.ntp.org
-#
+Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
 
-# array of server addresses
+```
+# list of server 
 ntp_servers: []
 # start on boot
 ntp_service_enabled: yes
@@ -49,6 +44,12 @@ ntp_driftfile: /var/lib/ntp/ntp.drift
 # stats dir
 ntp_statsdir: /var/log/ntpstats/
 ```
+
+## Handlers
+
+These are the handlers that are defined in `handlers/main.yml`.
+
+* `restart ntp` 
 
 ## Example playbook
 
