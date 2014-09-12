@@ -35,6 +35,8 @@ Here is a list of all the default variables for this role, which are also availa
 ```
 # list of server 
 ntp_servers: []
+# list of peers
+ntp_peers: []
 # start on boot
 ntp_service_enabled: yes
 # current state: started, stopped
