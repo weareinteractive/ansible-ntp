@@ -9,3 +9,5 @@
       - 1.de.pool.ntp.org
       - 3.de.pool.ntp.org
       - 4.de.pool.ntp.org
+    ntp_peers:
+      - 127.0.0.4
