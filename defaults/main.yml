@@ -10,6 +10,8 @@ ntp_servers:
  - 2.ubuntu.pool.ntp.org
  - 3.ubuntu.pool.ntp.org
  - ntp.ubuntu.com
+# list of peer hosts (typically on the same network)
+ntp_peers: []
 # start on boot
 ntp_service_enabled: yes
 # current state: started, stopped

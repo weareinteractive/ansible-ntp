@@ -15,6 +15,11 @@ filegen clockstats file clockstats type day enable
 server {{ value }}
 {% endfor %}
 
+# If we are part of a network/cluster we may want to peer
+{% for value in ntp_peers %}
+peer {{ value }}
+{% endfor %}
+
 # Access control configuration; see /usr/share/doc/ntp-doc/html/accopt.html for
 # details.  The web page <http://support.ntp.org/bin/view/Support/AccessRestrictions>
 # might also be helpful.
