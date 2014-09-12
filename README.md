@@ -34,7 +34,12 @@ Here is a list of all the default variables for this role, which are also availa
 
 ```
 # list of server 
-ntp_servers: []
+ntp_servers:
+ - 0.ubuntu.pool.ntp.org
+ - 1.ubuntu.pool.ntp.org
+ - 2.ubuntu.pool.ntp.org
+ - 3.ubuntu.pool.ntp.org
+ - ntp.ubuntu.com
 # start on boot
 ntp_service_enabled: yes
 # current state: started, stopped
