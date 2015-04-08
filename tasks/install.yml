@@ -1,11 +1,6 @@
 ---
 
 - name: Installing packages
-  apt: >
-    pkg={{ item }}
-    state=present
-  with_items: ntp
-  tags:
-    - system
-    - ntp
-    - install
+  apt:
+    pkg: "{{ npt_package }}"
+    state: present
