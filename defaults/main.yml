@@ -3,6 +3,8 @@
 # http://www.ansibleworks.com/docs/playbooks_variables.html#id26
 #
 
+# package name (version)
+ntp_package: ntp
 # list of server
 ntp_servers:
  - 0.ubuntu.pool.ntp.org

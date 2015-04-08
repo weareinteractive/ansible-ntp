@@ -1,10 +1,12 @@
 # Ansible Ntp Role
 
-[![Build Status](https://travis-ci.org/weareinteractive/ansible-ntp.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-ntp)
-[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-ntp.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-ntp)
+[![Build Status](https://img.shields.io/travis/weareinteractive/ansible-apache2.svg)](https://travis-ci.org/weareinteractive/ansible-apache2)
+[![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.supervisor-blue.svg)](https://galaxy.ansible.com/list#/roles/1377)
+[![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-apache2.svg)](https://github.com/weareinteractive/ansible-apache2)
+[![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-apache2.svg)](https://github.com/weareinteractive/ansible-apache2)
 
-> `ntp` is an [ansible](http://www.ansible.com) role which: 
-> 
+> `ntp` is an [ansible](http://www.ansible.com) role which:
+>
 > * installs ntp
 > * configures ntp
 
@@ -16,24 +18,30 @@ Using `ansible-galaxy`:
 $ ansible-galaxy install franklinkim.ntp
 ```
 
-Using `arm` ([Ansible Role Manager](https://github.com/mirskytech/ansible-role-manager/)):
+Using `requirements.yml`:
 
 ```
-$ arm install franklinkim.ntp
+- src: franklinkim.ntp
 ```
 
 Using `git`:
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-ntp.git
+$ git clone https://github.com/weareinteractive/ansible-ntp.git franklinkim.ntp
 ```
+
+## Dependencies
+
+* Ansible 1.9
 
 ## Variables
 
 Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
 
 ```
-# list of server 
+# package name (version)
+ntp_package: ntp
+# list of server
 ntp_servers:
  - 0.ubuntu.pool.ntp.org
  - 1.ubuntu.pool.ntp.org
@@ -56,13 +64,13 @@ ntp_statsdir: /var/log/ntpstats/
 
 These are the handlers that are defined in `handlers/main.yml`.
 
-* `restart ntp` 
+* `restart ntp`
 
 ## Example playbook
 
 ```
 - host: all
-  roles: 
+  roles:
     - franklinkim.ntp
   vars:
     ntp_servers:
