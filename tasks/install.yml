@@ -2,5 +2,5 @@
 
 - name: Installing packages
   apt:
-    pkg: "{{ npt_package }}"
+    pkg: "{{ ntp_package }}"
     state: present
