@@ -1,6 +1,11 @@
+# /etc/ntp.conf, configuration for ntpd; see ntp.conf(5) for help
+
 # {{ ansible_managed }}
 
 driftfile {{ ntp_driftfile }}
+
+# Leap seconds definition provided by tzdata
+leapfile /usr/share/zoneinfo/leap-seconds.list
 
 # Enable this if you want statistics to be logged.
 statsdir {{ ntp_statsdir }}
@@ -10,6 +15,13 @@ filegen loopstats file loopstats type day enable
 filegen peerstats file peerstats type day enable
 filegen clockstats file clockstats type day enable
 
+
+# You do need to talk to an NTP server or two (or three).
+#server ntp.your-provider.example
+
+# pool.ntp.org maps to about 1000 low-stratum NTP servers.  Your server will
+# pick a different set every time it starts up.  Please consider joining the
+# pool: <http://www.pool.ntp.org/join.html>
 # Specify one or more NTP servers.
 {% for value in ntp_servers %}
 server {{ value }}
@@ -29,12 +41,15 @@ peer {{ value }}
 # up blocking replies from your own upstream servers.
 
 # By default, exchange time with everybody, but don't allow configuration.
-restrict -4 default kod notrap nomodify nopeer noquery
-restrict -6 default kod notrap nomodify nopeer noquery
+restrict -4 default kod notrap nomodify nopeer noquery limited
+restrict -6 default kod notrap nomodify nopeer noquery limited
 
 # Local users may interrogate the ntp server more closely.
 restrict 127.0.0.1
 restrict ::1
+
+# Needed for adding pool entries
+restrict source notrap nomodify noquery
 
 # Clients from this (example!) subnet have unlimited access, but only if
 # cryptographically authenticated.
