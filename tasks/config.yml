@@ -3,7 +3,7 @@
 - name: Configuring ntp
   template:
     src: "{{ item }}.j2"
-    dest: "/{{ item }}"
+    dest: "/{{ item }}"
     owner: root
     group: root
     mode: 0644
