@@ -2,11 +2,13 @@
 
 - name: Configuring ntp
   template:
-    src: etc-ntp.conf.j2
-    dest: /etc/ntp.conf
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
     owner: root
     group: root
     mode: 0644
+  with_items:
+    - "etc/ntp.conf"
   notify: restart ntp
 
 - name: Configuring service
