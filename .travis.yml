@@ -5,7 +5,7 @@ services:
   - docker
 env:
   global:
-    - role: weareinteractive.cron
+    - role: weareinteractive.ntp
   matrix:
     - distribution: Ubuntu
       distribution_version: "18.04"
