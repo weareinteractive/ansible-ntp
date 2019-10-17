@@ -28,12 +28,6 @@ debian9: .run
 debian8: dist=debian-8
 debian8: .run
 
-centos%: TEST_DEPS=apt-get update && \
-	yum install -y python
-
-centos7: dist=el-7
-centos7: .run
-
 .run:
 	@echo "RUN:"
 	@echo "	docker run -it --rm -v $(PWD):$(ROLE_PATH) ansiblecheck/ansiblecheck:$(dist) /bin/bash"
