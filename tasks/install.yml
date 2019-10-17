@@ -1,6 +1,6 @@
 ---
 
 - name: Installing packages
-  apt:
-    pkg: "{{ ntp_package }}"
+  package:
+    name: "{{ ntp_package }}"
     state: present
