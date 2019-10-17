@@ -2,7 +2,7 @@
 
 - hosts: all
   roles:
-    - franklinkim.ntp
+    - weareinteractive.ntp
   vars:
     ntp_servers:
       - 0.de.pool.ntp.org
