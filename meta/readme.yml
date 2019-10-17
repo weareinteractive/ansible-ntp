@@ -1,0 +1,17 @@
+---
+
+galaxy_name: weareinteractive.ntp
+github_user: weareinteractive
+github_name: ansible-ntp
+badges: |
+  [![Build Status](https://img.shields.io/travis/weareinteractive/ansible-ntp.svg)](https://travis-ci.org/weareinteractive/ansible-ntp)
+  [![Galaxy](http://img.shields.io/badge/galaxy-weareinteractive.ntp-blue.svg)](https://galaxy.ansible.com/weareinteractive/ntp)
+  [![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-ntp.svg)](https://github.com/weareinteractive/ansible-ntp)
+  [![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-ntp.svg)](https://github.com/weareinteractive/ansible-ntp)
+description: |
+  > * installs ntp
+  > * configures ntp
+
+  **Note:**
+
+  > Since Ansible Galaxy supports [organization](https://www.ansible.com/blog/ansible-galaxy-2-release) now, this role has moved from `franklinkim.ntp` to `weareinteractive.ntp`!
