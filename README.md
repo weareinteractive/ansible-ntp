@@ -81,6 +81,7 @@ These are the handlers that are defined in `handlers/main.yml`.
 
 - name: restart ntp
   service: name=ntp state=restarted
+  when: ntp_service_state != 'stopped'
 
 ```
 
@@ -94,7 +95,7 @@ This is an example playbook:
 
 - hosts: all
   roles:
-    - franklinkim.ntp
+    - weareinteractive.ntp
   vars:
     ntp_servers:
       - 0.de.pool.ntp.org
