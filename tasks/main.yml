@@ -1,12 +1,12 @@
 ---
 
-- include: install.yml
+- import_tasks: install.yml
   tags:
     - system
     - ntp
     - npt-install
 
-- include: config.yml
+- import_tasks: config.yml
   tags:
     - system
     - ntp
